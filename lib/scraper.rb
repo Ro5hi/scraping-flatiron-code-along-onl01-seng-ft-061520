@@ -18,9 +18,7 @@ end
   end 
   
   
-  Scraper.new.get_page
-  
-    def make_courses
+  def make_courses
     self.get_courses.each do |post|
       course = Course.new
       course.title = post.css("h2").text
